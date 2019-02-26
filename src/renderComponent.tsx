@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { MyComponent } from './6-react';
+import { MyComponent } from './4-react';
 
 ReactDOM.render(
-  <MyComponent />,
+  <MyComponent prop1={3} />,
   document.getElementById('root') as HTMLElement
 );

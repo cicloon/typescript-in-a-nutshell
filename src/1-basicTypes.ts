@@ -3,50 +3,65 @@ export const basicTypes = () => {
   const someBoolean: boolean = false;
   console.log('someBoolean', someBoolean);
 
-  const age: number = 29;
-  let personName = 'Wadusname';
-  personName = 'Menganico';
-  // personName = 3;
-  // personName = 3;
+  /* Type inference */
+  // const otherBoolean = true;
+  // console.log('otherBoolean', someBoolean);
 
-  const phrase: string = `My name is ${personName} and my age ${age}`;
-  console.log(phrase);
+  // const age: number = 29;
+  // let personName = 'Wadusname';
+  // personName = 'Menganico';
+  // // personName = 3;
+  // // personName = 3;
 
-  /* Arrays */
-  const someArray: number[] = [1, 2, 3] ;
-  const someArray2: number[] = [1, 2, 3] ;
-  console.log('someArray', someArray);
+  // const phrase: string = `My name is ${personName} and my age ${age}`;
+  // console.log(phrase);
 
-  /* Tuples */
-  let tuple: [string, number];
+  // /* Arrays */
+  // const someArray: number[] = [1, 2, 3] ;
+  // // const someArray2: number[] = [1, 2, 'a'] ;
+  // console.log('someArray', someArray);
 
-  tuple = [personName, age];
-  // console.log(tuple[0].toLocaleUpperCase());
+  // /* Tuples */
+  // let tuple: [string, number];
 
-  tuple[2] = 'something else';
-  tuple[3] = 'hola';
-  console.log('tuple', tuple);
+  // tuple = [personName, age];
+  // // console.log(tuple[0].toLocaleUpperCase());
 
-  /* Enums */
-  enum ButtonSize {Small, Medium, Large}
-  let myButtonSize: ButtonSize;
-  myButtonSize = ButtonSize.Small;
+  // // tuple[2] = 'something else';
+  // // tuple[3] = 'hola';
+  // console.log('tuple', tuple);
 
-  console.log('myButtonSize', myButtonSize);
-  console.log('myButtonSize name', ButtonSize[myButtonSize]);
+  // /* Enums */
+  // enum ButtonSize {Small, Medium, Large}
+  // let myButtonSize: ButtonSize;
+  // myButtonSize = ButtonSize.Small;
 
-  /* Any */
-  // tslint:disable-next-line
-  const something: any = '23';
+  // console.log('myButtonSize', myButtonSize);
+  // console.log('myButtonSize name', ButtonSize[myButtonSize]);
 
-  // Type assertions (type casting)
-  const someString: string = (something as string);
-  console.log(someString);
+  // /* Any */
+  // // tslint:disable-next-line
+  // let something: any;
+  // something = 'some string';
 
-  /* Union types */
-  let age2: string | number;
-  age2 = 30;
-  age2 = 'thirty';
-  console.log(age2);
+  // // Type assertions (type casting)
+  // const someString: string = (something as string);
+  // console.log(someString.trim());
+  // console.log(something.trim());
 
+  // /* Unknown */
+  // // const otherThing: unknown = 'hola';
+  // // console.log(otherThing.trim());
+
+  // /* Union types */
+  // let age2: string | number;
+  // age2 = 30;
+  // age2 = 'thirty';
+  // console.log(age2);
+
+  // const myFunction = (someVar: string | number) => {
+  //   // return someVar.trim();
+  // };
+
+  // console.log(myFunction('hola'));
 };
