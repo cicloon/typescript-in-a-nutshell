@@ -42,19 +42,23 @@ import { number } from 'prop-types';
 //   };
 // }
 
-// interface Strategy<TSelectors extends  {} = {}> {
+// interface Selectors {
+//   [k: string]: () => number;
+// }
+
+// interface Strategy<TSelectors extends Selectors = Selectors> {
 //   name: string;
 //   selectors: TSelectors;
 // }
 
-// interface ConcreSelectors {
+// interface ConcreSelectors extends Selectors {
 //   someSelector: () => number;
 // }
 
 // type ConcreteStrategy = Strategy<ConcreSelectors>;
 
 // type SelectorsOfStrategy<TStrategy extends Strategy> = {
-//   [K in keyof TStrategy['selectors']]?: TStrategy['selectors'][K]
+//   [K in keyof TStrategy['selectors']]: TStrategy['selectors'][K];
 // };
 
 // class RemoteEntity<TStrategy extends Strategy> {
@@ -64,8 +68,8 @@ import { number } from 'prop-types';
 //     this.strategy = strategy;
 //   }
 
-//   public selectors(): SelectorsOfStrategy<TStrategy>  {
-//     return this.strategy.selectors;
+//   public get selectors(): SelectorsOfStrategy<TStrategy> {
+//     return this.strategy.selectors as SelectorsOfStrategy<TStrategy>;
 //   }
 // }
 
@@ -116,6 +120,6 @@ export const advancedTypes = () => {
   // const concreteStrategy: ConcreteStrategy = { name: 'myStrategy', selectors: { someSelector: () => 23 }  };
 
   // const re = new RemoteEntity(concreteStrategy);
-  // re.selectors().someSelector!();
+  // re.selectors.someSelector();
 
 };
