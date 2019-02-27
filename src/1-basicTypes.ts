@@ -1,16 +1,15 @@
 export const basicTypes = () => {
   /* Basic types */
-  const someBoolean: boolean = false;
-  console.log('someBoolean', someBoolean);
+  // const someBoolean: boolean = false;
+  // console.log('someBoolean', someBoolean);
 
-  /* Type inference */
+  // /* Type inference */
   // const otherBoolean = true;
-  // console.log('otherBoolean', someBoolean);
+  // console.log('otherBoolean', otherBoolean);
 
   // const age: number = 29;
   // let personName = 'Wadusname';
   // personName = 'Menganico';
-  // // personName = 3;
   // // personName = 3;
 
   // const phrase: string = `My name is ${personName} and my age ${age}`;
@@ -59,9 +58,39 @@ export const basicTypes = () => {
   // age2 = 'thirty';
   // console.log(age2);
 
+  // /* functions */
+  // const someFunction = (param1: string): number => {
+    // return param1.length;
+  // };
+  // console.log(someFunction('hola'));
+
+  /** returns string length */
+  // function functionWithOverload(param1: string): number;
+  // /** returns the passed number */
+  // function functionWithOverload(param1: number): number;
+  // function functionWithOverload(param1: string | number ) {
+  //   if (typeof param1 === 'string') {
+  //     return param1.length;
+  //   }
+  //   return param1;
+  // }
+  // functionWithOverload();
+
+// const otherFunction = (param1: string, param2?: string) => {
+//     console.log(param1, param2);
+//   };
+// console.log(otherFunction('hola'));
+
   // const myFunction = (someVar: string | number) => {
   //   // return someVar.trim();
   // };
 
   // console.log(myFunction('hola'));
+
+  // function functionWithSpreadParams(param1: number, ...args: [string, string]): void;
+  // function functionWithSpreadParams(param1: number, ...args: [string, string, string]): void;
+  // function functionWithSpreadParams (param1: number, ...args: string[]) {
+  //  console.log(param1, args);
+  // }
+  // functionWithSpreadParams(23, 'hola', 'adios');
 };

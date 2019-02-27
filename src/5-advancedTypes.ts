@@ -122,4 +122,6 @@ export const advancedTypes = () => {
   // const re = new RemoteEntity(concreteStrategy);
   // re.selectors.someSelector();
 
+  // re.selectors.something();
+
 };
